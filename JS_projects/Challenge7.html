@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head><title></title>
+    </head>
+
+    <body>
+       
+        <p id="para1">paragraph 1</p>
+        <p id="para3">paragraph 3</p>
+
+        <input id="B1" type="button" onclick="createP()" value= "Add Para 2" />
+        <input id="B2" type="button" onclick="ammendP()" value= "Change Text" />
+        <input id="B3" type="button" onclick="deleteP()" value= "Delete" />
+     <script type= "text/javascript">
+            function createP() {
+            
+            document.getElementById("para3").insertAdjacentHTML("beforebegin", '<p id="para2">paragraph 2</p>');
+        
+            }
+        </script>
+        <script type="text/javascript">
+            function ammendP() {
+                document.getElementById("para2").innerHTML = "text changed!";
+            
+            }
+            </script>
+
+             <script type="text/javascript">
+            function deleteP() {
+                var element = document.getElementById("para2");
+                 element.parentNode.removeChild(element);
+            
+            }
+            </script>
+
+
+    </body>
+    
+    </html>
